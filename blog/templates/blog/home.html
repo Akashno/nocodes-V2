@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}NoCodes{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock style %}
+
+
+{% block content %}
+    {% include 'blog/!navbar.html'  %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-0"></div>
+        <div class="col-md-8 col-12">
+            <p class="blog-moto">From the Basics.</p>
+            <div class="blog-moto-underline"></div>
+            <div class="mt-5 ">
+                {% include 'blog/!filter.html'  %}
+            </div>
+            <div class="result">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid blog-wrapper " id="blog-wrapper">
+    {% for post in posts %}
+
+            {% include 'blog/!blogs.html'  %}
+
+    {% endfor %}
+</div>
+{% endblock content %}
+
+
+{% block script %}
+<script src="{% static 'js/blogs_filter.js' %}"></script>
+{% endblock script %}
