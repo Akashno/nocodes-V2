@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}my resume{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock style %}
+{% block content %}
+<object data="{% static 'image/AKASHNO.pdf' %}" type="application/pdf" class="resume">
+    <p>It appears you don't have a PDF plugin for this browser.
+    No biggie... you can <a href="{% static 'image/AKASHNO.pdf' %}">click here to
+    download the PDF file.</a></p>
+</object>
+
+
+{% endblock content %}
+

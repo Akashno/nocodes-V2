@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About me{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+{% endblock style %}
+
+
+{% block content %}
+{% include 'blog/!navbar.html'  %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-0"></div>
+        <div class="col-md-8 col-12">
+            <p class="about-title">Lets talk about me</p>
+            <div class="about-title-underline"></div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid about-wrapper " id="about-wrapper">
+    <div class="row">
+        <div class="col-md-4 col-12 order-lg-1 order-md-1 order-2 d-md-flex justify-content-end">
+            <img alt="" class="profile-img" src="{% static 'image/akashno.jpg' %}">
+        </div>
+        <div class="col-md-8 col-12 order-lg-2 order-md-2 order-1">
+            <div class="about-container mt-3">
+                <p class="about-body">Hey, it's me Akash N O. I am just trying to find things that will make me love
+                    living and that's how I found my craze with computers. I am currently working on mastering backend
+                    web development with python and the beautiful Django framework. It's not like my hands are 24/7 on
+                    the keyboard, Hanging out with friends and playing sports is also my thing.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5 " >
+        <div class="col-md-3 col-12 order-lg-2 order-md-2 order-2 ">
+            <img alt="" class="collage-img" src="{% static 'image/collage.jpg' %}">
+        </div>
+        <div class="col-md-9 col-12 order-lg-1 order-md-1 order-1 d-md-flex justify-content-end">
+            <div class="about-container mt-3 mb-5">
+                <p class="about-body">For me, college days were a lot more than just completing my BCA degree. Meeting
+                    people from different places with a different vibes upheld my overall growth. St Mary’s College was
+                    a perfect place for me to spend my campus life. The academic life I had there have helped me to
+                    chose a passionate career path and more importantly finding some cool people to have around me. </p>
+            </div>
+        </div>
+    </div>
+     <div class="container d-flex justify-content-center mt-5  ">
+         <a href="{% url 'resume' %}" class="btn border-warning">view resume</a>
+     </div>
+</div>
+{% endblock content %}
+
+
+{% block script %}
+<script src="{% static 'js/blogs_filter.js' %}"></script>
+{% endblock script %}
