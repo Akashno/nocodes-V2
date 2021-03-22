@@ -29,6 +29,8 @@ class Post(models.Model):
         return str(self.title)
 
 
+
+
 class Section(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=300, null=True, blank=True)
@@ -51,3 +53,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return str(self.user) + ":  " + str(self.body)[:15]
+
