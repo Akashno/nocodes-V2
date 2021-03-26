@@ -22,7 +22,7 @@ def home(request):
 def post(request, pk):
     post = Post.objects.get(id=pk)
     sections = Section.objects.filter(post=post)
-    share_string = quote_plus(post.title)
+    share_string = {'title':quote_plus(post.title),'summery':post.description[0:20]}
     context = {'post': post, 'sections': sections, 'share_string': share_string}
     return render(request, 'blog/post.html', context)
 

@@ -1,6 +1,6 @@
 
 <!--reddit-->
-<a class="text-decoration-none text-reset" href="http://www.reddit.com/submit?url={{request.build_absolute_uri}}&title={{share_string}}">
+<a class="text-decoration-none text-reset" href="http://www.reddit.com/submit?url={{request.build_absolute_uri}}&title={{share_string.title}}">
     <i class="fa fa-reddit-square" aria-hidden="true"></i>
 </a>
 <!--facebook-->
@@ -12,7 +12,7 @@
     <i class="fa fa-google-plus-square " aria-hidden="true"></i>
 </a>
 <!--linkedin-->
-<a class="text-decoration-none text-reset" href="https://www.linkedin.com/shareArticle?mini=true&url={{request.build_absolute_uri}}&title={{share_string}}&summary=nocodes&source={{request.build_absolute_uri}}">
+<a class="text-decoration-none text-reset" href="https://www.linkedin.com/shareArticle?mini=true&url={{request.build_absolute_uri}}&title={{share_string.title}}&summary={{share_string.summery}}&source={{request.build_absolute_uri}}">
     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
 </a>
 
