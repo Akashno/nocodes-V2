@@ -13,7 +13,7 @@ from blog.models import Post, Section
 def apiOverView(request):
     api_list = {
         'list': 'api/PostList/',
-        'filterlist': 'api/filterBlog/',
+        'filterlist': 'api/filterBlog/<str:text>',
         'post': 'api/postDetail/<int:pk>',
 
 
