@@ -7,5 +7,5 @@ Updated UI of nocodes blog app
 ![image](https://user-images.githubusercontent.com/52347258/113559371-ddd76c00-961e-11eb-920c-e2c8180970f4.png)
 
 
+![image](https://user-images.githubusercontent.com/52347258/113559450-019ab200-961f-11eb-8200-9db4dcdbfce6.png)
 
-![Uploading image.png…]()
