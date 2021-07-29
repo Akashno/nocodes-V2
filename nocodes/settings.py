@@ -122,6 +122,7 @@ USE_TZ = True
 #cors_headers
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://localhost:8080"
 
 ]
 
