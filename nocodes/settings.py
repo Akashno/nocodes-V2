@@ -120,13 +120,21 @@ USE_L10N = True
 USE_TZ = True
 
 #cors_headers
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://localhost:8080",
+#     "https://nocodes-vue.herokuapp.com"
+
+# ]
+CORS_ORIGIN_ALLOW_ALL=True
+CORS_ORIGIN_WHITELIST = [
+    "https://example.com",
+    "https://sub.example.com",
     "http://localhost:8080",
+    "http://127.0.0.1:9000",
     "https://nocodes-vue.herokuapp.com"
-
+    
 ]
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
