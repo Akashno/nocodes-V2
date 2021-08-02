@@ -4,10 +4,11 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.serializers import PostSerializer, SectionSerializer
+from api.serializers import PostSerializer, SectionSerializer , SvgSerializer
 from blog.filters import ModelFilter
 from blog.models import Post, Section
 
+from illustrations.models import Svg
 
 @api_view(['GET'])
 def apiOverView(request):
@@ -15,6 +16,7 @@ def apiOverView(request):
         'list': 'api/PostList/',
         'filterlist': 'api/filterBlog/<str:text>',
         'post': 'api/postDetail/<int:pk>',
+        'illustrations': 'api/illustrations'
 
 
     }
@@ -47,4 +49,12 @@ def filterBlog(request,text):
     item = text
     posts = ModelFilter(model_objects=posts, item=item).filter()
     serializer = PostSerializer(posts,many=True)
+    return Response(serializer.data)
+
+
+
+@api_view(['GET'])
+def svgList(request):
+    svgs = Svg.objects.all()
+    serializer = SvgSerializer(svgs, many=True)
     return Response(serializer.data)
